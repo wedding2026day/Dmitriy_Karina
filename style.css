@@ -5,6 +5,13 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'Courier10';
+  src: url('font/ofont.ru_Courier10 Win95BT.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
 /* Общие сбросы и базовые настройки для мобильной версии */
 * {
   margin: 0;
@@ -571,9 +578,11 @@ display:block;
 .block10{
 width:100%;
 overflow:hidden;
+background:#fff;
 }
 
 /* верхняя картинка */
+
 .block10-top-wrap{
 position:relative;
 width:100%;
@@ -585,6 +594,7 @@ display:block;
 }
 
 /* текст поверх */
+
 .block10-text{
 position:absolute;
 top:0;
@@ -593,123 +603,133 @@ width:100%;
 height:100%;
 }
 
-/* строки */
 .block10-line{
 position:absolute;
-color:#000000;
-font-size:28pt;
+font-family:'GentlemensScript', cursive;
+color:#000;
 opacity:0;
-font-family: 'GentlemensScript', cursive;
 transform:translateY(20px);
 }
 
-/* положение текста */
 .block10-line1{
 top:68%;
 left:17%;
-font-size: 20pt;
+font-size:20pt;
 }
 
 .block10-line2{
 top:68%;
 left:35%;
-font-size: 20pt;
+font-size:20pt;
 }
 
-/* появление как в предыдущих блоках */
 .block10.show .block10-line1{
-animation:fadeText 0.8s ease forwards;
-animation-delay:0.2s;
+animation:fadeText .8s ease forwards;
+animation-delay:.2s;
 }
 
 .block10.show .block10-line2{
-animation:fadeText 0.8s ease forwards;
-animation-delay:0.8s;
-}
-
-@keyframes fadeText{
-to{
-opacity:1;
-transform:translateY(0);
-}
+animation:fadeText .8s ease forwards;
+animation-delay:.8s;
 }
 
 /* форма */
+
 .block10-form{
 width:100%;
-padding:20px;
+padding:20px 0 40px;
 display:flex;
 flex-direction:column;
-align-items:center;
-gap:20px;
+align-items:flex-start;
 }
 
-/* поле ввода */
+/* поле */
+
 .block10-input{
 width:90%;
+margin:0 auto 24px;
 padding:12px 0;
 border:none;
 border-bottom:1px solid #000;
 outline:none;
 background:transparent;
 font-size:16px;
+color:#000;
 }
 
-/* строка с чекбоксом и картинкой */
-/* строка с чекбоксом и текстом-картинкой */
-.block10-check-row{
+/* заголовки */
+
+.block10-drinks-title{
 width:90%;
+margin:0 auto 16px;
+font-family:'Courier10';
+font-size:20px;
+color:#000;
+}
+
+/* контейнер */
+
+.block10-check-wrap{
+width:90%;
+margin:0 auto 24px;
+}
+
+/* строка */
+
+.block10-check-row{
 display:flex;
-align-items:flex-start;
-gap:8px;
-}
-
-/* чекбокс */
-.block10-checkbox{
-margin-top:80px;   /* двигай выше/ниже */
-margin-left:0;    /* двигай левее/правее через margin */
-width:18px;
-height:18px;
-flex:0 0 18px;
-}
-
-/* картинка-текст */
-.block10-check-img{
-display:block;
-width:calc(100% - 26px);
-height:auto;
-}
-
-
-
-/* картинка справа от чекбокса */
-
-
-/* кнопка-картинка */
-.block10-submit{
-border:none;
-background:transparent;
-padding:0;
+align-items:center;
+justify-content:flex-start;
+gap:10px;
+margin-bottom:12px;
+width:100%;
 cursor:pointer;
 }
 
-.block10-submit img{
+/* чекбокс */
+
+.block10-checkbox{
+width:18px;
+height:18px;
+min-width:18px;
+margin:0;
+padding:0;
+accent-color:#000;
+flex-shrink:0;
+}
+
+/* картинка */
+
+.block10-check-img{
 display:block;
-width:180px;
-max-width:100%;
+width:220px;
 height:auto;
 }
 
-.block10-drinks-title{
-font-size:20px;
-color:#000;
-margin-bottom:15px;
-font-family:'GentlemensScript', cursive;
+/* кнопка */
+
+.block10-submit{
+width:100%;
+display:flex;
+justify-content:center;
+align-items:center;
+border:none;
+background:transparent;
+padding:10px 0 0;
+cursor:pointer;
 }
 
-.block10-check-row span{
-font-size:16px;
-color:#000;
+.block10-submit-img{
+display:block;
+width:180px;
+max-width:80%;
+height:auto;
+}
+
+.block10-check-img{
+display:block;
+width:220px;
+height:auto;
 }
 
 /* БЛОК 11 */
